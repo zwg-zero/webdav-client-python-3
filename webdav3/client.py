@@ -87,7 +87,7 @@ class Client(object):
     large_size = 2 * 1024 * 1024 * 1024
 
     # request timeout in seconds
-    timeout = 30
+    timeout = (30, 300)
 
     # HTTP headers for different actions
     http_header = {
@@ -161,7 +161,8 @@ class Client(object):
             auth=(self.webdav.login, self.webdav.password),
             headers=self.get_headers(action, headers_ext),
             timeout=self.timeout,
-            data=data
+            data=data,
+            **self.default_options
         )
         if response.status_code == 507:
             raise NotEnoughSpace()
