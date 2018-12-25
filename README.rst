@@ -8,6 +8,11 @@ webdavclient3
 Based on https://github.com/designerror/webdav-client-python
 But uses `requests` instead of `PyCURL`
 
+change in Client class 
+=============
+* timeout to (30, 300)
+* add default_options into requests, so can add verify=False in default_options to diable cert verification
+
 Release Notes
 =============
 
