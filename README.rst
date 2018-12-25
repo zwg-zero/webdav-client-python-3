@@ -11,7 +11,7 @@ But uses `requests` instead of `PyCURL`
 change in Client class 
 =============
 * timeout to (30, 300)
-* add default_options into requests, so can add verify=False in default_options to diable cert verification
+* add default_options into requests, so can add verify=False in default_options to disable cert verification of requests
 
 Release Notes
 =============
